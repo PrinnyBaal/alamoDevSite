@@ -47,17 +47,17 @@
 
  const linkSnippets=[
    {
-     image:"../images/clientLogo.png",
+     image:"./images/clientLogo.png",
      text:"Subscribe on Youtube",
      link:"https://www.youtube.com/channel/UCtTjX1tZ_pNsht_aZ0B2uAA/featured"
    },
    {
-     image:"../images/discordIcon.png",
+     image:"./images/discordIcon.png",
      text:"Join in on Discord",
      link:"https://discord.gg/2vcRjtd"
    },
    {
-     image:"../images/steamLogo.png",
+     image:"./images/steamLogo.png",
      text:"Wishlist the game on Steam",
      link:"https://store.steampowered.com/app/1290620/Member_the_Alamo/"
    },
@@ -75,20 +75,20 @@
 
  const gallerySnippets=[
 
-   {image:"../images/screenshotMech.png",
+   {image:"./images/screenshotMech.png",
     title:"The opposing Forces",
     blurb:"Challenges you face may not exactly line up to what you remember in history class"},
-    {image:"../images/titleHeader.png",
+    {image:"./images/titleHeader.png",
      title:"Game Logo",
      blurb:"The logo used in most of our publications"},
-   {image:"../images/screenshotCast.png",
+   {image:"./images/screenshotCast.png",
     title:"Larger Than Life",
     blurb:"Follow and guide the stories of a colorful cast of heroes"},
 
-    {image:"../images/clientLogo.png",
+    {image:"./images/clientLogo.png",
     title:"Blue Collar Games' Logo",
     blurb:""},
-    {image:"../images/screenshotBattle.png",
+    {image:"./images/screenshotBattle.png",
      title:"Varied In-Game Action",
      blurb:"Make the most of VR with fun gunslinging action"},
 
