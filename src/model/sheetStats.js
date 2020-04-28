@@ -1,17 +1,6 @@
 
 
-// if (localStorage.getItem("savedChars") === null) {
-//   localStorage.setItem('savedChars', JSON.stringify(savedChars));
-// }
-//
-// if (localStorage.getItem("activeChar") === null) {
-//   localStorage.setItem('activeChar', 0);
-// }
-
-
-
-
-
+//FAQ SECTION
  const faqSnippets=[
    {
      question:"What platforms will the game launch on?",
@@ -34,10 +23,16 @@
 
 
  ];
+ ////~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+
+//TRAILER SECTION
 //Note that this url needs to be an EMBED url otherwise the video payer will refuse to connect.  You can right click a video and select 'get embed code' then get the url listed after 'src'
- const trailerURL="https://www.youtube.com/embed/3RJ-3AAo4nM";
+const trailerURL="https://www.youtube.com/embed/3RJ-3AAo4nM";
+ ////~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+
+//CONTACT SECTION
 const mailchimpForm=`<link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
 <style type="text/css">
 	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; width:100%;}
@@ -55,7 +50,7 @@ const mailchimpForm=`<link href="//cdn-images.mailchimp.com/embedcode/horizontal
 </form>
 </div>`;
 
-
+//this const controls the lefthand side of the contact section.  Thngs like a physical address would fit naturally here for example
  const contactSnippets=[
    {name:"E-Mail",
     info:"BlueCollarGamesForever@GMail.com"
@@ -63,6 +58,7 @@ const mailchimpForm=`<link href="//cdn-images.mailchimp.com/embedcode/horizontal
 
  ];
 
+//This controls the right-hand side of the contact section.  It ALSO controls the bar of clickable icons at the bottom of the side
  const linkSnippets=[
    {
      image:"./images/youtubeLogo.png",
@@ -86,7 +82,10 @@ const mailchimpForm=`<link href="//cdn-images.mailchimp.com/embedcode/horizontal
    },
 
  ];
+ ////~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+
+//PRESS KIT SECTION
  const gameDescription="Member the Alamo? is a VR shooter loosely based on the historic battle that birthed Texas. You will fight alongside larger than life heroes as you defend the Alamo from Santa Anna and his Mexican army that outnumber you 100 to 1.";
  const quickFacts=["<b>Projected Release Date:</b> Coming Soon <br><br>",
                   "<b>Developer:</b> Blue Collar Games <br><br>",
@@ -119,39 +118,12 @@ const mailchimpForm=`<link href="//cdn-images.mailchimp.com/embedcode/horizontal
  ];
 
 
+//This is simply a helper function tha tdeals with behidn the scenes javascript
  let ci={
    jumpTo:function(anchor){
      window.location.href = "#"+anchor;
    },
-   dieRoll:function(dieSides){
-     return Math.floor(Math.random()*dieSides)+1;
-   },
-   array_move:function(arr, old_index, new_index) {
-     //https://stackoverflow.com/questions/5306680/move-an-array-element-from-one-array-position-to-another
-     if (new_index >= arr.length) {
-         var k = new_index - arr.length + 1;
-         while (k--) {
-             arr.push(undefined);
-         }
-     }
-     arr.splice(new_index, 0, arr.splice(old_index, 1)[0]);
-     return arr; // for testing
-   },
-   checkCommonGround:function(array1, array2){
-     //tests if array1 and 2 have ANY elements in common
-     let commonGround=false;
-     if (array1.length<array2.length){
-       for (let i=0, len=array1.length; i<len; i++){
-         if (array2.includes(array1[i])){commonGround=true; break;}
-       }
-     }else{
-       for (let i=0, len=array2.length; i<len; i++){
-         if (array1.includes(array2[i])){commonGround=true; break;}
-       }
-     }
 
-     return commonGround;
-   },
    copyToClipboard:(copyText, completionText)=>{
      /* Get the text field */
 
@@ -188,10 +160,3 @@ const mailchimpForm=`<link href="//cdn-images.mailchimp.com/embedcode/horizontal
   }
 
  }
-
-function resetStorage(){
-  if (window.confirm("Do you really want to delete all your saved info?")) {
-  localStorage.clear();
-  location.reload();
-}
-}
