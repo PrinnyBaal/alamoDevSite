@@ -38,6 +38,24 @@
 //Note that this url needs to be an EMBED url otherwise the video payer will refuse to connect.  You can right click a video and select 'get embed code' then get the url listed after 'src'
  const trailerURL="https://www.youtube.com/embed/3RJ-3AAo4nM";
 
+const mailchimpForm=`<link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; width:100%;}
+	/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
+<div id="mc_embed_signup">
+<form action="https://memberthealamo.us4.list-manage.com/subscribe/post?u=2f8ebaf5b1735df54cd0b0aab&amp;id=20a4ef27c9" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div id="mc_embed_signup_scroll">
+	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_2f8ebaf5b1735df54cd0b0aab_20a4ef27c9" tabindex="-1" value=""></div>
+    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    </div>
+</form>
+</div>`;
+
+
  const contactSnippets=[
    {name:"E-Mail",
     info:"BlueCollarGamesForever@GMail.com"
@@ -47,7 +65,7 @@
 
  const linkSnippets=[
    {
-     image:"./images/clientLogo.png",
+     image:"./images/youtubeLogo.png",
      text:"Subscribe on Youtube",
      link:"https://www.youtube.com/channel/UCtTjX1tZ_pNsht_aZ0B2uAA/featured"
    },
@@ -59,6 +77,11 @@
    {
      image:"./images/steamLogo.png",
      text:"Wishlist the game on Steam",
+     link:"https://store.steampowered.com/app/1290620/Member_the_Alamo/"
+   },
+   {
+     image:"./images/oculusLogo.png",
+     text:"Visit us on the Oculus Store [Coming Soon]",
      link:"https://store.steampowered.com/app/1290620/Member_the_Alamo/"
    },
 

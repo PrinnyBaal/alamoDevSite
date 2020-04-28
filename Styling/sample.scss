@@ -21,7 +21,9 @@ $saveIcon:"https://img.icons8.com/dotty/80/000000/save-as.png";
 
 
 //client assets
-$gameBanner_blue:"../images/titleHeader.png";
+$gameBanner:"../images/memberrLogo.png";
+$bannerBlue:#2B8DFB;
+$bannerBlue_Dark:#206FC8;
 .hoverFlow{
   overflow:hidden;
 }
@@ -92,8 +94,9 @@ $gameBanner_blue:"../images/titleHeader.png";
 }
 
 #shopBanner{
-  height:30vw;
-  background-image:url($gameBanner_blue);
+  height:35vh;
+  width:45vh;
+  background-image:url($gameBanner);
   overflow:hidden;
 
   background-size:100%  100%;
@@ -110,9 +113,48 @@ $gameBanner_blue:"../images/titleHeader.png";
   min-height:50px;
   display:flex;
   flex-wrap:wrap;
+  justify-content:space-around;
   //border:2px solid black;
   // position:absolute;
   // bottom:0;
+  #faqBtn{
+    background-image:url('../images/faqButton_Raised.png');
+  }
+
+  #faqBtn:active{
+    background-image:url('../images/faqButton_Pressed.png');
+  }
+  #faqBtn:hover{
+    background-image:url('../images/faqButton_Pressed.png');
+  }
+  #pressKitBtn{
+    background-image:url('../images/pressKitButton_Raised.png');
+  }
+  #pressKitBtn:active{
+    background-image:url('../images/pressKitButton_Pressed.png');
+  }
+  #pressKitBtn:hover{
+    background-image:url('../images/pressKitButton_Pressed.png');
+  }
+  #trailerBtn{
+    background-image:url('../images/trailerButton_Raised.png');
+  }
+  #trailerBtn:active{
+    background-image:url('../images/trailerButton_Pressed.png');
+  }
+  #trailerBtn:hover{
+    background-image:url('../images/trailerButton_Pressed.png');
+  }
+  #contactBtn{
+    background-image:url('../images/contactButton_Raised.png');
+  }
+  #contactBtn:active{
+    background-image:url('../images/contactButton_Pressed.png');
+  }
+  #contactBtn:hover{
+    background-image:url('../images/contactButton_Pressed.png');
+  }
+
   .tabButton{
     font-family:$storeFont;
     font-size:2em;
@@ -126,6 +168,8 @@ $gameBanner_blue:"../images/titleHeader.png";
     outline:none;
     color:$radiantWhite;
     flex-grow:1;
+    background-size:contain;
+    background-position: center;
   }
 
   .tabButton:hover{
@@ -163,12 +207,12 @@ $gameBanner_blue:"../images/titleHeader.png";
       //border-bottom:1px solid black;
        align-items:center;
       padding-left:4em; padding-right:2em;
-      img{
-        width:4em;
-        height:4em;
-        border-radius:50%;
-        margin-right:.5em;
-      }
+      // img{
+      //   width:4em;
+      //   height:4em;
+      //   border-radius:50%;
+      //   margin-right:.5em;
+      // }
     }
   }
   .contactSliceR{
@@ -188,10 +232,21 @@ $gameBanner_blue:"../images/titleHeader.png";
   text-decoration: underline;
 }
 
+.linkImg{
+
+    width:4em;
+    height:4em;
+    border-radius:50%;
+    margin-right:.5em;
+
+}
+
 .linkImg:hover{
   cursor:pointer;
   border:.25em groove gold;
 }
+
+
 
 // #footer{
 //   background-color:brown;
@@ -203,11 +258,21 @@ $gameBanner_blue:"../images/titleHeader.png";
 
 body{
   //background-image:url("https://res.cloudinary.com/metaverse/image/upload/v1533578530/Backgrounds/ep_naturalblack.png");
-  background-color:#2B8DFB;
+  background-color:$bannerBlue;
   font-family:$baseFont;
   button:hover{
     cursor:pointer;
   }
+}
+
+#footerBand{
+  margin-top: 4em;
+margin-bottom: 4em;
+padding-top: .5em;
+padding-bottom: .5em;
+display: flex;
+justify-content: center;
+background-color: $bannerBlue_Dark;
 }
 
 

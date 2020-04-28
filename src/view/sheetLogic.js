@@ -1,8 +1,8 @@
 
 sheetProj.view.sheetLogic = {
   setupUserInterface: function () {
-    snippetFuncs.createTrailer();
-
+    snippetFuncs.createTrailer(true);
+    snippetFuncs.createBtnBar();
     }
 };
 
@@ -24,6 +24,17 @@ let snippetFuncs={
           </div>`;
     $("#displaySection").html(faqHTML);
     ci.jumpTo("tabRow");
+  },
+  createBtnBar:()=>{
+
+    let btnBar="";
+
+    linkSnippets.forEach((snip)=>{
+      btnBar+=`<img class="linkImg" onclick="ci.newWindow('${snip.link}')" src="${snip.image}">`;
+    });
+
+    $("#footerBand").html(btnBar);
+
   },
   createGallery:()=>{
     let galleryHTML;
@@ -114,9 +125,14 @@ let snippetFuncs={
       <div id="contactSection" >
         <div class="contactSliceR">
           ${indirectLinks}
+          <hr>
+          <b>Join our mailing list:</b>
+          ${mailchimpForm}
         </div>
+
           <div class="contactSliceL" style="">
             ${directLinks}
+
           </div>
 
       </div>
@@ -124,7 +140,7 @@ let snippetFuncs={
   $("#displaySection").html(contactHTML);
   ci.jumpTo("tabRow");
 },
-  createTrailer:()=>{
+  createTrailer:(skipJump)=>{
 
     let trailerHTML;
     trailerHTML=`
@@ -136,6 +152,10 @@ let snippetFuncs={
       </div>
     </div>`;
   $("#displaySection").html(trailerHTML);
-  ci.jumpTo("tabRow");
+
+  if (!skipJump){
+    ci.jumpTo("tabRow");
+  }
+
   }
 }
